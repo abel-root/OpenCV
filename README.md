@@ -59,7 +59,7 @@
     
     For save image you can use the function ``` imwrite() ```, the image is saved in the current folder. 
 
-exemple :
+example :
      
  ```
  cv.imwrite(new_filename,img)
@@ -83,7 +83,7 @@ Resume load and save image
 
 It's posible to show the image with the `matplotlib` library.
 
-exemple : 
+example : 
   
   ```
     import cv2 as cv 
@@ -94,6 +94,28 @@ exemple :
     plt.imshow(img) # draw image 
 
     plt.show() # show image 
-    
+
   ```
  
+ ### Get image shape 
+
+>The shape() method is used to get contours from the image. It allows to have : 
+   - Width 
+   - Height 
+   - RGB chanal 
+
+example : 
+
+```
+   print(img.shape) # to show ```img.shape``` data 
+```
+
+### Get image size 
+
+>This function is use to get image size 
+
+example : 
+
+```
+ print (img.size) # to show ```img.size``` data 
+```
