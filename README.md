@@ -196,7 +196,7 @@ if cv.waitKey(0) & 0xff =="q":
 ```
 ### cvtColor 
 
-This function is used to convert image in a type in other type. For example in RGB en Gray 
+This function is used to convert image in a type to other type. For example in RGB en Gray 
 
 - BRG to Gray :
 
@@ -243,9 +243,9 @@ imgray=cv.cvtColor(imgBRG, cv.COLOR_BGR2GRAY)
 ret,binaryImage =cv.threshold(imgray,10,255,cv.THRESH_BINARY)
 
 ```
-if pixel <10 then pixel=0
-if pixel >= 10 then pixel=255
-if pixel >255 then pixel = 255
+- if ```pixel <10 ```then ```pixel=0```
+- if ```pixel >= 10``` then ```pixel=255```
+- if ```pixel >255``` then ```pixel = 255```
 
 - type : 
 
