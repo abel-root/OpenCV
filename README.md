@@ -79,4 +79,21 @@ Resume load and save image
     #destroy all windows is openned 
     cv.destroyAllWindows()
 ```
+### Show image with the library matplotlib
 
+It's posible to show the image with the `matplotlib` library.
+
+exemple : 
+  
+  ```
+    import cv2 as cv 
+    import matplotlib.pyplot as plt
+
+    img = cv.imread(filename)  # load image 
+
+    plt.imshow(img) # draw image 
+
+    plt.show() # show image 
+    
+  ```
+ 
