@@ -20,7 +20,7 @@
      - ``` 0 ```  Loads image in grayscale mode
      - ``` -1 ``` Loads image as such including alpha channel
 
->>It is posible to use without the flags. The image will be generate is color image 
+>It is posible to use without the flags. The image will be generate is color image 
 
     ```
     import cv2 as cv 
@@ -38,9 +38,9 @@
 
 3.  WaitKey() 
 
->>Use to update the curent windows and can allows to ouside the windows with keyboard 
+>Use to update the curent windows and can allows to ouside the windows with keyboard 
    
-    ``` cv.Waitekey(0)```
+ ``` cv.Waitekey(0)```
 
 ### Resume loading image 
 
@@ -57,7 +57,7 @@
 ```
 ### Saves image 
     
->>For save image you can use the function ``` imwrite() ```, the image is saved in the current folder. 
+For save image you can use the function ``` imwrite() ```, the image is saved in the current folder. 
 
 >example :
      
@@ -81,7 +81,7 @@
 ```
 ### Show image with the library matplotlib
 
->>It's posible to show the image with the `matplotlib` library.
+>It's posible to show the image with the `matplotlib` library.
 
 example : 
   
@@ -119,3 +119,19 @@ example :
 ```
  print (img.size) # to show ```img.size``` data 
 ```
+
+### Split the image chanal 
+
+>This function is able to split chanal and retturned RGB chanal.
+
+example :
+
+```
+import cv2 as cv 
+
+img=cv.imread(filename)
+r,b,g = img.split()
+
+```
+Each element is ndarray 
+
