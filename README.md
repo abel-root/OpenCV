@@ -165,10 +165,10 @@ r,b,g = img.split()
 
 Following operators are implemented in OpenCV:
 
-  - bitwise_and
-  - bitwise_or
-  - bitwise_xor
-  - bitwise_not
+  - ```bitwise_and```
+  - ```bitwise_or```
+  - ```bitwise_xor```
+  - ```bitwise_not```
 
 
 
