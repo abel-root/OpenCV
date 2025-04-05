@@ -130,7 +130,7 @@ example :
 import cv2 as cv 
 
 img=cv.imread(filename)
-r,b,g = img.split()
+ b,g,r = img.split()
 
 ```
 Each element is ndarray. You can check to print data 
@@ -145,4 +145,30 @@ print(f"r : {r}\n\n")
 print(f"b : {b}\n\n")
 print(f"g : {g}")
 ```
+
+### Merge chanal 
+
+This function is used to merge all chanal in one.
+
+example : 
+```
+import cv2 as cv 
+
+img=cv.imread(filename)
+r,b,g = img.split()
+
+```
+
+### Bitwise Operations 
+
+```Bitwise``` operations are used in image manipulation and for ```extracting``` the essential parts in the image.
+
+Following operators are implemented in OpenCV:
+
+  - bitwise_and
+  - bitwise_or
+  - bitwise_xor
+  - bitwise_not
+
+
 
