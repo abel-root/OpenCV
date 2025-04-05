@@ -56,11 +56,11 @@
 
 ```
 ### Saves image 
+    
     For save image you can use the function ``` imwrite() ```, the image is save the current folder. 
 
-    exemple :
+exemple :
      
-     ````
-        cv.imwrite(new_filename,img)
-     ```
-     
+ ````
+ cv.imwrite(new_filename,img)
+ ```
