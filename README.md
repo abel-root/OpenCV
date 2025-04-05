@@ -57,10 +57,26 @@
 ```
 ### Saves image 
     
-    For save image you can use the function ``` imwrite() ```, the image is save the current folder. 
+    For save image you can use the function ``` imwrite() ```, the image is saved in the current folder. 
 
 exemple :
      
- ````
+ ```
  cv.imwrite(new_filename,img)
  ```
+
+Resume load and save image 
+```
+    img = cv.imread("Photo24.png",0) 
+    #show image 
+    cv.namedWindow("mage_1")
+    cv.imshow("image_3",img)
+
+    #update windows show 
+    key=cv.waitKey(0) 
+    if key==ord("s"):
+        cv.imwrite("new_image.png",img)
+    #destroy all windows is openned 
+    cv.destroyAllWindows()
+```
+
