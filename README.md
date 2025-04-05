@@ -133,5 +133,16 @@ img=cv.imread(filename)
 r,b,g = img.split()
 
 ```
-Each element is ndarray 
+Each element is ndarray. You can check to print data 
+
+.eig : 
+```
+import cv2 as cv 
+
+img=cv.imread(filename)
+r,b,g = img.split()
+print(f"r : {r}\n\n")
+print(f"b : {b}\n\n")
+print(f"g : {g}")
+```
 
