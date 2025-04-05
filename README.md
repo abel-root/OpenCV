@@ -8,7 +8,7 @@
 ## OpenCV with python 
 
 ### Loard image 
-  For loarding image with the OpenCV, it must use the function :
+>For loarding image with the OpenCV, it must use the function :
 1. imread()
 
 ```
@@ -20,7 +20,7 @@
      - ``` 0 ```  Loads image in grayscale mode
      - ``` -1 ``` Loads image as such including alpha channel
 
-    It is posible to use without the flags. The image will be generate is color image 
+>>It is posible to use without the flags. The image will be generate is color image 
 
     ```
     import cv2 as cv 
@@ -38,7 +38,7 @@
 
 3.  WaitKey() 
 
-    Use to update the curent windows and can allows to ouside the windows with keyboard 
+>>Use to update the curent windows and can allows to ouside the windows with keyboard 
    
     ``` cv.Waitekey(0)```
 
@@ -57,15 +57,15 @@
 ```
 ### Saves image 
     
-    For save image you can use the function ``` imwrite() ```, the image is saved in the current folder. 
+>>For save image you can use the function ``` imwrite() ```, the image is saved in the current folder. 
 
-example :
+>example :
      
  ```
  cv.imwrite(new_filename,img)
  ```
 
-Resume load and save image 
+>Resume load and save image 
 ```
     img = cv.imread("Photo24.png",0) 
     #show image 
@@ -81,7 +81,7 @@ Resume load and save image
 ```
 ### Show image with the library matplotlib
 
-It's posible to show the image with the `matplotlib` library.
+>>It's posible to show the image with the `matplotlib` library.
 
 example : 
   
