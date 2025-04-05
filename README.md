@@ -194,3 +194,65 @@ if cv.waitKey(0) & 0xff =="q":
     cv.destroyAllWindows()
 
 ```
+### cvtColor 
+
+This function is used to convert image in a type in other type. For example in RGB en Gray 
+
+- BRG to Gray :
+
+```
+import cv2 as cv
+
+imgBRG=cv.imread(filename)
+imgray=cv.cvtColor(imgBRG, cv.COLOR_BGR2GRAY)
+```
+
+- BRG to HSV : 
+
+```
+import cv2 as cv
+
+imgBRG=cv.imread(filename)
+imghsv=cv.cvtColor(imgBRG, cv.COLOR_BGR2HSV)
+```
+
+- BRG to RGB :
+
+```
+import cv2 as cv
+
+imgBRG=cv.imread(filename)
+imghsv=cv.cvtColor(imgBRG, cv.COLOR_BGR2RGB)
+```
+
+### threshold
+
+This function is used to convert the ```gray image``` to the ```binary image```
+
+```
+    retval, dst = cv.threshold(src, thresh, maxval, type)
+
+```
+example : 
+
+```
+import cv2 as cv
+
+imgBRG=cv.imread(filename)
+imgray=cv.cvtColor(imgBRG, cv.COLOR_BGR2GRAY)
+ret,binaryImage =cv.threshold(imgray,10,255,cv.THRESH_BINARY)
+
+```
+if pixel <10 then pixel=0
+if pixel >= 10 then pixel=255
+if pixel >255 then pixel = 255
+
+- type : 
+
+   - ```cv.THRESH_BINARY```
+   - ```cv.THRESH_BINARY_INV```
+   - ```cv.THRESH_TRUNC```
+   - ```cv.THRESH_TOZERO```
+   - ```cv.THRESH_TOZERO_INV```
+
+

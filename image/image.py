@@ -3,22 +3,25 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #load image 
-img = cv.imread("Photo24.png") 
-img_1 = cv.imread("new_image.png")
+img = cv.imread("spring.jpg") 
+img_1 = cv.imread("lyon.jpeg")
 
 
-dist1 = cv.bitwise_and(img,img_1, mask=None)
-dist2 = cv.bitwise_or(img,img_1,mask=None)
-dist3=cv.bitwise_xor(img,img_1, mask=None)
+rows,cols,channels = img_1.shape
 
-cv.imshow("img",img)
-cv.imshow("img_1",img_1)
-cv.imshow("AND ",dist1)
-cv.imshow("OR", dist2)
-cv.imshow("XOR",dist3)
+roi = img[0:rows, 0:cols]
 
-cv.imshow("Not img ", cv.bitwise_not(img, mask=None))
-cv.imshow("Not img_1", cv.bitwise_not(img_1,mask=None))
+img2gray=cv.cvtColor(img_1,cv.COLOR_BGR2GRAY) # permet de convertir l'image rgb en image gray
+ret, mask = cv.threshold(img2gray,10,255,cv.THRESH_BINARY)
+mask_inv = cv.bitwise_not(mask)
+# Now black-out the area of logo
+img1_bg = cv.bitwise_and(roi,roi,mask = mask_inv)
+# Take only region of logo from logo image.
+img2_fg = cv.bitwise_and(img_1,img_1,mask = mask)
+# Put logo in ROI
+dst = cv.add(img2_fg, img1_bg)
+img[0:rows, 0:cols ] = dst
 
-if cv.waitKey(0) & 0xff =="q":
-    cv.destroyAllWindows()
+cv.imshow("Result",img)
+cv.waitKey(0)
+cv.destroyAllWindows()
