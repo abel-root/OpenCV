@@ -28,16 +28,22 @@
 
     ```
 2. imshow()
+
     Use to show image on windows 
-    ````
+    
+    ```
         cv.namedWindow("window_name") # rename windows 
         cv.imshow(windows_name, img)
     ```
+
 3.  WaitKey() 
+
     Use to update the curent windows and can allows to ouside the windows with keyboard 
+   
     ``` cv.Waitekey(0)```
 
-### End load image 
+### Resume loading image 
+
 ```
  import cv2 as cv 
 
@@ -49,3 +55,12 @@
  cv.destroyAllWindows()
 
 ```
+### Saves image 
+    For save image you can use the function ``` imwrite() ```, the image is save the current folder. 
+
+    exemple :
+     
+     ````
+        cv.imwrite(new_filename,img)
+     ```
+     
