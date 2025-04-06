@@ -282,11 +282,11 @@ cv.waitKey(0)
 cv.destroyAllWindows()
 ```
 
-### line() 
+### function ```line ```
 >This function is used to draw the line on the image.
 How can use : 
 ```
-cv.line(src,pt1,pt2,color,thickness)
+cv2.line(src,pt1,pt2,color,thickness)
 ```
 
 example : 
@@ -301,3 +301,74 @@ cv.imshow("Result",img)
 cv.waitKey(0)
 cv.destroyAllWindows()
 ```
+
+### function ```cicle```
+>This function is used to draw the cicle on the image.
+
+How can use that ? 
+
+```
+cv2.circle(img, center, radius, color,thickness)
+```
+
+example : 
+
+```
+img = cv.imread("Photo24.png") 
+
+cv.circle(img,(200,200), 100, (255,255,0), -1)
+
+cv.imshow("Result",img)
+cv.waitKey(0)
+cv.destroyAllWindows()
+```
+
+### function ```rectangle```
+>This function is used to draw rectangle on image. 
+
+How can use ?
+
+```
+cv.rectangle(img, pt1, pt2, color,thickness)
+```
+
+example :
+
+```
+img = cv.imread("Photo24.png") 
+
+cv.rectangle(img,(200,100),(400,400),(0,255,0),5)
+
+cv.imshow("Result",img)
+cv.waitKey(0)
+cv.destroyAllWindows()
+```
+### function ```ellipse```
+>This is used to draw  ellipse. 
+
+How can use ?
+```
+cv2.ellipse(img, center, axes, angle,startAngle, endAngle, color, thickness)
+```
+
+example : 
+
+```
+img = cv.imread("Photo24.png") 
+
+cv.ellipse(img, (300,425), (80, 20), 5, 0, 360, (0,0,255), -1)
+
+cv.imshow("Result",img)
+cv.waitKey(0)
+cv.destroyAllWindows()
+```
+
+### Parameters 
+
+This is the commun parameters for all function 
+
+1. ```img``` :  The image where you want to draw the shapes
+2. ```color``` :  Color of the shape. for BGR, pass it as a tuple. For grayscale, just pass
+the scalar value.
+2. ```thickness``` : Thickness of the line or circle etc. If -1 is passed for closed figures like circles, it will fill the shape
+3. ```lineType``` : Type of line, whether 8-connected, anti-aliased line etc.
