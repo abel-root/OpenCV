@@ -281,6 +281,7 @@ cv.imshow("Result",img)
 cv.waitKey(0)
 cv.destroyAllWindows()
 ```
+## Draw functions 
 
 ### function ```line ```
 >This function is used to draw the line on the image.
@@ -412,8 +413,8 @@ cv2.destroyAllWindows()
   - ```FONT_HERSHEY_SCRIPT_SIMPLEX``` 
   - ```FONT_HERSHEY_SCRIPT_COMPLEX``` 
   - ```FONT_ITALIC``` 
-  
-=========================================
+
+-----------------------------------------
 
 2. Font Size 
   -  ```0````
