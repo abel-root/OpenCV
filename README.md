@@ -403,26 +403,15 @@ cv2.destroyAllWindows()
 ```
 ### Parameters 
 
-1. Font Name            
-  - ```FONT_HERSHEY_SIMPLEX``` 
-  - ```FONT_HERSHEY_PLAIN ```
-  - ```FONT_HERSHEY_DUPLEX ```
-  - ```FONT_HERSHEY_COMPLEX``` 
-  - ```FONT_HERSHEY_TRIPLEX``` 
-  - ```FONT_HERSHEY_COMPLEX_SMALL``` 
-  - ```FONT_HERSHEY_SCRIPT_SIMPLEX``` 
-  - ```FONT_HERSHEY_SCRIPT_COMPLEX``` 
-  - ```FONT_ITALIC``` 
+1. Font Name                                        2. Font Size 
+  - ```FONT_HERSHEY_SIMPLEX```                          ```0```
+  - ```FONT_HERSHEY_PLAIN ```                           ```1```
+  - ```FONT_HERSHEY_DUPLEX ```                          ```2```
+  - ```FONT_HERSHEY_COMPLEX```                          ```3```
+  - ```FONT_HERSHEY_TRIPLEX```                          ```4```
+  - ```FONT_HERSHEY_COMPLEX_SMALL```                    ```5```
+  - ```FONT_HERSHEY_SCRIPT_SIMPLEX```                   ```6```
+  - ```FONT_HERSHEY_SCRIPT_COMPLEX```                   ```7```
+  - ```FONT_ITALIC```                                   ```16```
 
------------------------------------------
 
-2. Font Size 
-  -  ```0```
-  -  ```1```
-  -  ```2```
-  -  ```3```
-  -  ```4```
-  -  ```5```
-  -  ```6```
-  -  ```7```
-  -  ```16```
