@@ -372,3 +372,56 @@ This is the commun parameters for all function
 the scalar value.
 2. ```thickness``` : Thickness of the line or circle etc. If -1 is passed for closed figures like circles, it will fill the shape
 3. ```lineType``` : Type of line, whether 8-connected, anti-aliased line etc.
+
+## Draw text 
+### Function putText
+This function is used to draw text on image. 
+
+How can use ?
+
+```
+cv.putText(img, text, org, fontFace, fontScale, color, thickness)
+```
+example : 
+
+```
+import cv2
+
+img = cv2.imread('messi.JPG',1)
+
+txt="Lionel Messi"
+
+font = cv2.FONT_HERSHEY_SIMPLEX
+
+cv2.putText(img,txt,(10,100), font, 2,(255,255,255),2,cv2.LINE_AA)
+
+cv2.imshow('image',img)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+### Parameters 
+
+1. Font Name            
+  - ```FONT_HERSHEY_SIMPLEX``` 
+  - ```FONT_HERSHEY_PLAIN ```
+  - ```FONT_HERSHEY_DUPLEX ```
+  - ```FONT_HERSHEY_COMPLEX``` 
+  - ```FONT_HERSHEY_TRIPLEX``` 
+  - ```FONT_HERSHEY_COMPLEX_SMALL``` 
+  - ```FONT_HERSHEY_SCRIPT_SIMPLEX``` 
+  - ```FONT_HERSHEY_SCRIPT_COMPLEX``` 
+  - ```FONT_ITALIC``` 
+  
+=========================================
+
+2. Font Size 
+  -  ```0````
+  -  ```1````
+  -  ```2````
+  -  ```3````
+  -  ```4````
+  -  ```5````
+  -  ```6````
+  -  ```7````
+  -  ```16````
