@@ -520,3 +520,5 @@ writeObj.release()
 cv.destroyAllWindows()
 
 ```
+
+## Mouse Events
