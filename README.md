@@ -426,7 +426,7 @@ cv2.VideoCapture(CAM_ID)
 ```
 
 #### Parameters 
-1. CAM_ID : is use to identiifier the camera ID. The first camera has the id ```0```, the second has the id ```1```, etc.
+1. ```CAM_ID``` : is use to identiifier the camera ID. The first camera has the id ```0```, the second has the id ```1```, etc.
 
 
 example : 
