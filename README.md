@@ -434,4 +434,48 @@ example :
 ```
 import cv2 
 cv2.VideoCapture(0)
+assert captObj.isOpened(), "Impossible d'ouvrir la caméra."
+```
+
+### VideoWriter(,,..) 
+>This function is used to generate the video. 
+
+How can use: 
+```
+writeObj = cv.VideoWriter(filename, fourcc, fps, (frame_width, frame_height))
+```
+#### Parameters 
+1. ```filename``` : is the file name. ```example``` : output.mp4
+2. ```fourcc```: is used to indicate the video type 
+>example : ```fourcc = cv.VideoWriter_fourcc(*'mp4v')```
+3. ```fps```: the vitess of the video. ```example```: fps=30 
+4. ```(frame_width, frame_height)``` : indicate (width , height) of the frame 
+>example : 
+- ```frame_width = int(captObj.get(cv.CAP_PROP_FRAME_WIDTH))```
+- ```frame_height = int(captObj.get(cv.CAP_PROP_FRAME_HEIGHT))```
+
+---------------------------------------------------------------------
+
+- ```read()``` : use to read in real-time video
+- ```write(img)``` : use to enregistre the frame
+- ```imshow(window_name, img)``` : show the image in real-time
+
+-----------------------------------------------------------------------
+
+example : 
+```
+import cv2 as cv
+
+# Ouvrir la caméra
+captObj = cv.VideoCapture(0)
+assert captObj.isOpened(), "Impossible d'ouvrir la caméra."
+
+# Paramètres vidéo
+frame_width = int(captObj.get(cv.CAP_PROP_FRAME_WIDTH))
+frame_height = int(captObj.get(cv.CAP_PROP_FRAME_HEIGHT))
+fps = 30
+fourcc = cv.VideoWriter_fourcc(*'mp4v') # type: ignore
+writeObj = cv.VideoWriter('output.mp4', fourcc, fps, (frame_width, frame_height))
+
+isFrameReturned, img = captObj.read() 
 ```
