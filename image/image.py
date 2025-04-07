@@ -2,13 +2,20 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+# mouse callback function
+def drawfunction(event,x,y,flags,param):
+    if event == cv.EVENT_LBUTTONDBLCLK:
+        cv.circle(img,(x,y),20,(0,0,255),-1)
 #load image 
+
 img = cv.imread("Photo24.png") 
 
-txt="KONAN Kouakou Abel"
-font = cv.FONT_HERSHEY_SIMPLEX
-cv.putText(img,txt,(200,100), font, 2,(0,0,255),2,cv.LINE_AA)
+cv.setMouseCallback('image',drawfunction)
 
-cv.imshow("Result",img)
-cv.waitKey(0)
+while(1):
+    cv.imshow("Result",img)
+    key=cv.waitKey(1)
+    if key==27:
+        break
 cv.destroyAllWindows()

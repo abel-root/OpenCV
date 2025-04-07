@@ -415,3 +415,23 @@ cv2.destroyAllWindows()
   - ```FONT_ITALIC```                   ----             ```16```
 
 
+## Capture Video 
+
+### VideoCapture(CAM_ID)
+>This function is used to open the camera or webcam 
+How can use ? 
+```
+cv2.VideoCapture(CAM_ID)
+
+```
+
+#### Parameters 
+1. CAM_ID : is use to identiifier the camera ID. The first camera has the id ```0```, the second has the id ```1```, etc.
+
+
+example : 
+
+```
+import cv2 
+cv2.VideoCapture(0)
+```
